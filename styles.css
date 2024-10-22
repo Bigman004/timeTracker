@@ -1,0 +1,155 @@
+@font-face {
+    font-family: myFont;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #3a3a6b;
+    font-family: myFont;
+}
+.container{
+    width:  70%;
+    margin: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "side-bar work play study"
+    "side-bar exercise social self-care";
+    gap: 1em;
+}
+.side-bar{
+    grid-area: side-bar;
+    background-color: #1a1a31;
+    border-radius: 10px;
+    color: #ffff;
+}
+.content{
+    background-color: #246481;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    padding-bottom: 33px;
+}
+.option{
+    background-color: #1a1a31;  
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+.work{
+    grid-area: work;
+    background-color: #aa4b1f;
+}
+.play{
+    grid-area: play;
+    background-color: #3564ac;
+}
+.study{
+    grid-area: study;
+    background-color: #cf442b;
+    
+}
+.exercise{
+    grid-area: exercise;
+    background-color: #418a24;
+}
+.social{
+    grid-area: social;
+    background-color: #1b1b86;
+    
+    
+}
+.self-care{
+    grid-area: self-care;
+    background-color: #74751a;
+}
+.value{
+    font-size: 30px;
+}
+.time-container{
+    border-radius: 10px;
+}
+.time-container .icon{
+    height: 30px;
+    padding-left: 75%;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.time-container .info{
+    padding: 25px;
+    background-color: #1a1a31;
+    color: #ffff;
+    border-radius: 10px;
+    
+}
+header img, header div{
+    display: inline-block;
+    padding-bottom: 20px;
+}
+header img{
+    float: right;
+}
+.side-bar img{
+    height: 70px;
+    border: 2px solid #ffff;
+    border-radius: 50%;
+}
+.text{
+    font-size: 30px;
+    padding-top: 0px;
+}
+ul{
+    list-style-type: none;
+    padding: 0px;
+    
+}
+li{
+    margin-top: 10px
+}
+li:hover{
+    cursor: pointer;
+}
+.info img:hover{
+    cursor: pointer;
+}
+footer, header, .option, p{
+    font-size: small;
+}
+footer{
+    opacity: 0.5;
+    padding-top: 5px;
+}
+.info:hover{
+    cursor: pointer;
+    background-color: #20202c;
+}
+@media screen and (max-width: 720px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "side-bar" "work" "play" "study" "exercise" "social" "self-care" ;
+        width: 90%;
+        margin: 5%;
+    }
+
+    ul{
+        display: flex;
+    }
+    li{
+        margin: auto;
+    }
+    .content{
+        display: flex;
+    }
+    .group, content{
+        margin: auto;
+    }
+    .option{
+        padding-top: 0;
+    }
+}
